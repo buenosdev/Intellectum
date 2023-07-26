@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intellectum</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="icon" href="./assets/img/logo2.png" type="image/png">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top" style="background-color: #00000002;">
+          <a class="navbar-brand" href="../inicio/inicio.html">
+            <img src="./assets/img/logo2.png" alt="Logo Intellectum" width="60px">
+          </a>
+          <div class="navbar-brand">
+            <h1 style="display: inline-block; margin: center 1px; padding-right: 5px;">Intellectum</h1>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="../inicio/inicio.html">Início</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../cursos/cursos.html">Cursos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../sobre/sobre.html">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../recursos/recursos.html">Recursos</a>
+              </li>
+              <div class="nav2" id="navbarNav">
+              <li class="nav-item">
+                <a class="nav-link highlighted custom-link" data-toggle="modal" data-target="#loginModal" href="../login/entrar.html">Já sou da casa</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+
+<body>
+    <div class="container-body">
+        <div class="course">
+            <img src="./assets/img/vestibular.jpg" alt="Imagem do Curso Preparatório para Vestibular" class="course-image">
+            <div class="course-info">
+                <div class="custom-container">
+                <h1>Vestibular - Curso Preparatório</h1>
+    
+                <p>Este curso se concentra em estratégias de escrita eficazes e revisão das regras para a redação do vestibular.</p>
+    
+                <h2>Tópicos abordados:</h2>
+                <ul>
+                    <li>Técnicas de escrita</li>
+                    <li>Análise de temas de redações anteriores</li>
+                    <li>Estruturação de argumentos</li>
+                    <li>Revisão e correção de redações</li>
+                </ul>
+    
+                <h2>Requisitos:</h2>
+                <ul>
+                    <li>Ensino médio em andamento ou completo</li>
+                </ul>
+    
+                <h2>Duração:</h2>
+                <p>4 meses</p>
+
+                <h2>Preço</h2>
+                <p>R$199,00/MENSAL</p>
+    
+                <div class="buttons">
+                    <button class="button" data-toggle="modal" data-target="#loginModal">Inscrever-se</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="my-footer">
+        <div class="footer-container">
+          <p class="footer-text">&copy; 2023 Intellectum. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Bem-vindo!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="loginContent">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Usuário:</label>
+                                <input type="text" id="username" name="username" placeholder="Digite seu usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha:</label>
+                                <input type="password" id="password" name="password" placeholder="Digite sua senha">
+                            </div>
+                            <button type="submit" class="button">Entrar</button>
+                        </form>
+                    </div>
+                    <div id="registerContent" style="display: none;">
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="newUsername">Usuário:</label>
+                                <input type="text" id="newUsername" name="newUsername" placeholder="Digite seu nome de usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">Senha:</label>
+                                <input type="password" id="newPassword" name="newPassword" placeholder="Digite uma senha">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirmar senha:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar senha">
+                            </div>
+                            <button type="submit" class="button">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button" onclick="showLoginForm()">Login</button>
+                    <button type="button" class="button secondary" onclick="showRegisterForm()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showLoginForm() {
+            document.getElementById("loginContent").style.display = "block";
+            document.getElementById("registerContent").style.display = "none";
+        }
+
+        function showRegisterForm() {
+            document.getElementById("loginContent").style.display = "none";
+            document.getElementById("registerContent").style.display = "block";
+        }
+    </script>
+</body>
+</html>
+

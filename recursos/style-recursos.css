@@ -1,0 +1,520 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.content-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos do header */
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.navbar-brand h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.custom-link {
+  color: #2600ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.custom-link:hover {
+  color: #4220bd;
+}
+
+
+.nav-item {
+  margin-right: 10px;
+}
+
+.nav-link {
+  color: #333;
+}
+
+/* login*/
+
+/* botões de login*/
+
+.buttons {
+  margin-top: 30px;
+}
+
+.button {
+  background-color: #6c63ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; 
+  
+}
+
+.button.secondary {
+  background-color: #6c63ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+.button:hover {
+  background-color: #5249d3;
+  color:#ffffff;
+  border-color: #000000;
+  box-shadow: #000000;
+  text-decoration: none;
+}
+
+/* login pop up */
+
+.login-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.login-content {
+  background-color: #000000;
+  max-width: 400px;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #555;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  text-align: left; /* Adicionado para alinhar à esquerda */
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.enter-button {
+  display: block;
+  margin-left: 0;
+}
+
+
+/* Estilo do conteúdo principal */
+.card-cronometro {
+  background-color: #fff;
+  margin: 2em 0;
+  padding: 2em;
+  box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+
+
+
+/* Estilos do cronômetro */
+.timer-display {
+  font-size: 1.5em;
+  color: #5249d3;
+  padding: 1em;
+  text-align: center;
+  border: 2px solid #2600ff;
+  border-radius: 5px;
+  font-size: 3em;
+  font-weight: 700;
+}
+
+.btn-control {
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  padding: 6px 12px; /* Espaçamento interno reduzido */
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  margin: 10px;
+  height: 40px; /* Altura reduzida */
+  width: auto; /* Largura automática para ajustar ao conteúdo */
+  flex: 1; 
+}
+
+.btn-control:hover {
+  background-color: #5249d3;
+}
+
+.button-container {
+  display: flex; /* Cria um container flexível */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+}
+
+/* Estilo do Fórum */
+.forum-container {
+  margin: 20px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post-content {
+  margin-top: 10px;
+}
+
+.comments {
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center;
+}
+
+.comment-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 40px;
+}
+
+.comment-expanded .comment-content {
+  max-height: none;
+}
+
+.comment-content {
+  margin-top: 10px;
+  max-height: none; 
+  overflow: visible; 
+  position: relative;
+}
+
+
+.comment-collapsed .comment-content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: linear-gradient(transparent, white);
+  height: 30px;
+}
+
+.btn-read-more {
+  color: #5249d3;
+  cursor: pointer;
+  display: block;
+}
+
+.comment-expanded .btn-read-more::before {
+  content: 'Recolher';
+}
+
+.comment-collapsed .btn-read-more::before {
+  content: 'Ler mais';
+}
+
+
+.comment-image {
+  max-width: 200px;
+  height: auto;
+}
+
+.comment-form {
+  margin-top: 20px;
+}
+
+.comment-form h3 {
+  margin-bottom: 10px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+
+
+.input-fields {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.file-input {
+  display: none;
+}
+
+.file-input-label {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  background-color: #6c63ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.file-input-label:hover {
+  background-color: #5249d3;
+  color:#ffffff;
+  text-decoration: none;
+}
+
+.button.file-button {
+  background-color: #6c63ff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none; 
+}
+
+.button.file-button:hover {
+  background-color: #5249d3;
+  color:#ffffff;
+  text-decoration: none;
+}
+.card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-body {
+  padding: 0;
+}
+
+
+
+
+/*Links de videos do youtube*/
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*carrossel*/
+.video-player {
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
+}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+.video-description {
+  color: #000000;
+  font-size: 20px;
+  margin-top: 50px; /* Ajuste esse valor conforme necessário */
+}
+
+
+
+
+
+
+/*Botões like e compartilhar*/
+
+.engage-button {
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.love-it-btn {
+  background-color: #ff6961;
+}
+
+.spread-knowledge-btn {
+  background-color: #3c6997;
+}
+
+
+/* POP UP COMPARTILHAR*/
+.compartilhar-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+.compartilhar-popup-button i {
+  color: black;
+}
+
+.compartilhar-popup-button:hover i {
+  color: rgba(0, 0, 0, 0.781);
+}
+
+.compartilhar-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.compartilhar-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.compartilhar-popup-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.compartilhar-popup-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.compartilhar-popup-content {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.compartilhar-popup-buttons {
+  text-align: center;
+}
+
+.compartilhar-popup-button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.compartilhar-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+
+
+
+
+/* Estilo do rodapé */
+.site-footer {
+  background-color: #79727228;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}

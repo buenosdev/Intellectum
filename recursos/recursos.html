@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intellectum</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="style-recursos.css">
+  <link rel="icon" href="./images/logo2.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-light bg-white fixed-top" style="background-color: #000000;">
+      <a class="navbar-brand" href="../inicio/inicio.html">
+        <img src="images/logo2.png" alt="Logo Intellectum" width="60px">
+      </a>
+      <div class="navbar-brand">
+        <h1 style="display: inline-block; margin: center 1px; padding-right: 5px;">Intellectum</h1>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../inicio/inicio.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../cursos/cursos.html">Cursos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../sobre/sobre.html">Sobre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../recursos/recursos.html">Recursos</a>
+          </li>
+          <div class="nav2" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link highlighted custom-link" data-toggle="modal" data-target="#loginModal" href="../login/entrar.html">Já sou da casa</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+<br>
+<br>
+<br>
+  <main class="main-content">
+    <div class="content-container">
+      <section class="card-cronometro">
+        <h1><span style="color: #3a25fa; font-weight: bold;">Cronômetro para Estudantes</span></h1>
+        <div id="display" class="timer-display">00:00:00</div>
+        <div class="button-container">
+          <button id="startStop" class="btn-control">Iniciar/Pausar</button>
+          <button id="reset" class="btn-control">Resetar</button>
+        </div>        
+      </section>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1>Dicas de Estudos da Semana</h1>
+
+      <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <iframe class="d-block w-100 video-player" src="https://www.youtube.com/embed/B9Qcy0DHybg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-description">
+              <p>Olá meu querido estudante! Está com medo do futuro e acha que não tem disciplina?? Esse video é especifico para você! </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <iframe class="d-block w-100 video-player" src="https://www.youtube.com/embed/2mHid4mhbjo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-description">
+
+              <p>Fala ae meu querido estudante! Tem pensado sobre o futuro e não sabe o que fazer após completar o ensino médio? Assista esse video!</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <iframe class="d-block w-100 video-player" src="https://www.youtube.com/embed/p2dnSWx5000" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="video-description">
+              <p>Fala ae meu querido estudante! Segue essas 8 dicas essencias que você deverá usar todos os dias nos seus estudos!</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#videoCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#videoCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Próximo</span>
+        </a>
+      </div>
+      
+        
+      <br>
+      <br>
+      <br>
+      <br>
+      
+
+      
+      <h1>Forum da comunidade</h1>
+      <div class="card">
+        <div class="card-body">
+            <div class="forum-container">
+                <div class="post-container">
+                    <div class="post">
+                        <div class="post-header">
+                            <img src="./images/perfil1.png" alt="User Avatar">
+                            <div class="post-info">
+                                <h2>Sr.Gabaritador</h2>
+                                <p>Postado em 09 de Julho de 2023</p>
+                            </div>
+                        </div>
+                        <div class="post-content">
+                            <p>Alguém pode me ajudar com a conjugação de verbos? Estou tendo dificuldades para entender como conjugá-los corretamente.</p>
+                            <div class="post-actions">
+                              <button class="engage-button love-it-btn"><i class="fas fa-heart"></i> Curtir <span id="likeCount">0</span></button>
+                              <button class="engage-button spread-knowledge-btn" id="shareBtn"><i class="fas fa-share-square"></i> Compartilhar</button>
+                            </div>
+                            <div class="compartilhar-popup-overlay"></div>
+                            <div class="compartilhar-popup">
+                              <h3 class="compartilhar-popup-title">Compartilhar</h3>
+                              <p class="compartilhar-popup-content">Clique nos botões abaixo para compartilhar nas redes sociais:</p>
+                              <div class="compartilhar-popup-buttons">
+                                <a href="https://www.facebook.com/IntellectumCursos" target="_blank" class="compartilhar-popup-button facebook-btn"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/intellectum.i/" target="_blank" class="compartilhar-popup-button instagram-btn"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com/channel/UCkS72FObDGarCE-jxfX-bVg" target="_blank" class="compartilhar-popup-button youtube-btn"><i class="fab fa-youtube" ></i></a>
+                              </div>                                                                                                                 
+                              <span class="compartilhar-popup-close">&times;</span>
+                            </div>
+                            
+                                 
+                            <div class="comments">
+                              <div id="comment-1" class="comment">
+                                  <div class="comment-header">
+                                      <img src="./images/perfil2.jpg" alt="User Avatar">
+                                      <div class="comment-info">
+                                          <h3>Gênio da literatura</h3>
+                                          <p>09 de Julho de 2023</p>
+                                      </div>
+                                  </div>
+                                  <div class="comment-content">
+                                      <p>Claro! Na língua portuguesa, temos muitos verbos irregulares que não seguem as regras normais de conjugação. Um exemplo é o verbo "ir". Veja o vídeo abaixo para entender melhor:</p>
+                                      <div class="video-container">
+                                        <iframe src="https://www.youtube.com/embed/PsGnw46lSKc?start=3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>                                    
+                                  </div>
+                              </div>
+                              <div id="comment-2" class="comment">
+                                  <div class="comment-header">
+                                      <img src="./images/perfil3.jpeg" alt="User Avatar">
+                                      <div class="comment-info">
+                                          <h3>Prof. Lemon</h3>
+                                          <p>10 de Julho de 2023</p>
+                                      </div>
+                                  </div>
+                                  <div class="comment-content">
+                                      <p>É importante lembrar também que muitos desses verbos são essenciais para a comunicação diária em português. Aqui está outro vídeo para ajudá-lo a praticar. Continue estudando!</p>
+                                      <div class="video-container">
+                                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rXt7TBwub8I" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                              </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+                          
+    
+          <div class="comment-form">
+            <h1>Deixe um Comentário</h1>
+            <form id="comment-form">
+              <input type="text" id="comment-name" class="input-fields" placeholder="Seu nome">
+              <textarea id="comment-content" class="input-fields" placeholder="Digite seu comentário"></textarea>
+              <input type="file" id="comment-image" class="input-fields file-input" accept="avatar">
+              <label for="comment-image" class="file-input-label">Escolher imagem</label>
+              <button type="submit" class="button file-button">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Bem-vindo!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="loginContent">
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Usuário:</label>
+                                <input type="text" id="username" name="username" placeholder="Digite seu usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Senha:</label>
+                                <input type="password" id="password" name="password" placeholder="Digite sua senha">
+                            </div>
+                            <button type="submit" class="button enter-button">Entrar</button>
+                        </form>
+                    </div>
+                    <div id="registerContent" style="display: none;">
+                        <form id="registerForm">
+                            <div class="form-group">
+                                <label for="newUsername">Usuário:</label>
+                                <input type="text" id="newUsername" name="newUsername" placeholder="Digite seu nome de usuário">
+                            </div>
+                            <div class="form-group">
+                                <label for="newPassword">Senha:</label>
+                                <input type="password" id="newPassword" name="newPassword" placeholder="Digite uma senha">
+                            </div>
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirmar senha:</label>
+                                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar senha">
+                            </div>
+                            <button type="submit" class="button enter-button">Cadastrar</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button" onclick="showLoginForm()">Login</button>
+                    <button type="button" class="button secondary" onclick="showRegisterForm()">Cadastrar</button>
+                </div>
+            </div>
+        </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      
+      <script>
+        function showLoginForm() {
+            document.getElementById("loginContent").style.display = "block";
+            document.getElementById("registerContent").style.display = "none";
+        }
+      
+        function showRegisterForm() {
+            document.getElementById("loginContent").style.display = "none";
+            document.getElementById("registerContent").style.display = "block";
+        }
+      </script>              
+      <script src="./botoes.js"></script>    
+    <script src="./cronometro.js"></script>
+    <script src="./forum.js"></script>
+  </main>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <footer class="site-footer">
+    <p>&copy; 2023 Intellectum. Todos os direitos reservados.</p>
+  </footer>
+</body>
+</html>
