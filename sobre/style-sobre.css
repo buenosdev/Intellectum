@@ -431,7 +431,54 @@ p {
   font-family: 'Roboto', sans-serif;
 }
 
+/* botão para o chat*/
 
+.chatBtn {
+  width: 70px; /* Aumenta o tamanho do botão */
+  height: 70px; /* Aumenta o tamanho do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #6c63ff;
+  background-image: linear-gradient(147deg, #6c63ff, #9400D3, #BA55D3);
+  cursor: pointer;
+  padding-top: 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+  position: fixed; /* Posição fixa */
+  bottom: 20px; /* Afastado do canto inferior */
+  right: 20px; /* Afastado do canto direito */
+  background-size: 300%;
+  background-position: left;
+  transition-duration: 1s;
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  background-color: #2600ff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.chatBtn:hover .tooltip {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.chatBtn:hover {
+  background-position: right;
+  transition-duration: 1s;
+}
 
 /* Estilos para o carrossel (utilizando a biblioteca Slick) */
 .carousel {
@@ -460,4 +507,6 @@ p {
     padding: 100px;
   }
 }
+
+
 

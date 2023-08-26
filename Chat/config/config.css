@@ -1,0 +1,238 @@
+/* ========== Variáveis de Tema ========== */
+:root {
+    --primary-bg-color: #36393f;
+    --secondary-bg-color: #2f3136;
+    --button-bg-color: #40444b;
+    --button-hover-bg-color: #50555c;
+    --text-color: white;
+}
+
+[data-theme="light"] {
+    --primary-bg-color: #f9f9f9;
+    --secondary-bg-color: #e6e6e6;
+    --button-bg-color: #f0f0f0;
+    --button-hover-bg-color: #e0e0e0;
+    --text-color: black;
+}
+
+/* ========== Geral ========== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    margin: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;  /* Adicionado para remover a barra horizontal */
+}
+
+/* ========== Main ========== */
+main {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    background-color: var(--secondary-bg-color);
+}
+
+.main-container {
+    display: flex;
+    max-width: 1000px;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+/* ========== Sidebar ========== */
+.sidebar {
+    width: 200px;
+    background-color: var(--secondary-bg-color);
+    padding: 0;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar-inner {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.user-profile h2,
+.user-profile p {
+    margin: 0;
+}
+
+.sidebar button {
+    color: var(--text-color);
+    background-color: var(--button-bg-color);
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+/* ========== Content ========== */
+.content {
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 90px;
+    margin-right: -500px;
+    background-color: var(--primary-bg-color);
+    overflow: auto;
+    display: flex;
+    flex-direction: center;
+    align-items: top;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Sections ========== */
+div.section {
+    display: none;
+}
+
+div.section.active {
+    display: block;
+}
+
+div.section h2 {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--button-hover-bg-color);
+}
+
+div.setting {
+    margin-bottom: 10px;
+}
+
+div.setting label {
+    display: block;
+    font-weight: bold;
+    color: #c3c3c3;
+}
+
+div.setting input,
+div.setting select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--button-hover-bg-color);
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: black;
+    transition: border 0.3s ease;
+}
+
+div.setting input:focus,
+div.setting select:focus {
+    border-color: #808080;
+}
+
+/* botão de fechar */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--button-bg-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.close-button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+
+/* ========== Notificação (botão) ========== */
+.button {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(44, 44, 44);
+    border-radius: 50%;
+    cursor: pointer;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.13);
+    border: none;
+  }
+  
+  .bell {
+    width: 18px;
+  }
+  
+  .bell path {
+    fill: white;
+  }
+  
+  .button:hover {
+    background-color: rgb(56, 56, 56);
+  }
+  
+  .button:hover .bell {
+    animation: bellRing 0.9s both;
+  }
+  
+  /* bell ringing animation keyframes*/
+  @keyframes bellRing {
+    0%,
+    100% {
+      transform-origin: top;
+    }
+  
+    15% {
+      transform: rotateZ(10deg);
+    }
+  
+    30% {
+      transform: rotateZ(-10deg);
+    }
+  
+    45% {
+      transform: rotateZ(5deg);
+    }
+  
+    60% {
+      transform: rotateZ(-5deg);
+    }
+  
+    75% {
+      transform: rotateZ(2deg);
+    }
+  }
+  
+  .button:active {
+    transform: scale(0.8);
+  }
+  
+
+
+
+

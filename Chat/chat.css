@@ -1,0 +1,779 @@
+:root {
+    /* Tema Escuro */
+    --background-color: #36393f;
+    --navbar-background-color: #2f3136;
+    --sidebar-background-color: #2f3136;
+    --button-background-color: #40444b;
+    --button-hover-background-color: #50555c;
+    --text-color: white;
+    --link-color: white;
+    --menu-background-color: #2f3136;
+    --chat-background-color: #40444b;
+    --conversations-background-color: #2f3136;
+    --border-color: #50555c; /* Cor da borda para o tema escuro */
+    --border-color: #ccc; /* Cor da borda */
+    --border-width: 1px; /* Largura da borda */
+    --border-style: solid; /* Estilo da borda */
+    --border-radius: 5px; /* Arredondamento dos cantos */
+}
+
+body.dark {
+    /* Tema Claro */
+    --background-color: #f0f1f6;
+    --navbar-background-color: #ffffff;
+    --sidebar-background-color: #f8f9fa;
+    --button-background-color: #e4e6eb;
+    --button-hover-background-color: #dcdde1;
+    --text-color: #333333;
+    --link-color: #000000;
+    --menu-background-color: #f8f9fa;
+    --chat-background-color: #e4e6eb;
+    --conversations-background-color: #ffffff;
+    --border-color: #dcdde1; /* Cor da borda para o tema claro */
+    --border-color: #2f3136; /* Cor da borda */
+    --border-width: 1px; /* Largura da borda */
+    --border-style: solid; /* Estilo da borda */
+    --border-radius: 5px; /* Arredondamento dos cantos */
+}
+
+
+
+/* Mudança de tema (botão)*/
+
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon,1.4em);
+    width: var(--size-of-icon,1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset,0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
+    ;
+   transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #303136;
+  }
+  
+  input:checked + .slider:before {
+    left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+  }
+
+/* ========== Geral ========== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+      overflow-y: hidden;
+  overflow-x: hidden;  /* Adicionado para remover a barra horizontal */
+}
+
+/* ========== Barra de Navegação ========== */
+.navbar {
+    background-color: var(--navbar-background-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%; /* ou qualquer tamanho que você queira */
+    height: 50px; /* ou qualquer tamanho que você queira */
+}
+
+.logo-title-container {
+    display: flex;
+    align-items: center; /* alinha os itens no centro verticalmente */
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 10px;
+    margin: 1px; /* adiciona uma margem de 5px em todas as direções */
+}
+
+
+.navbar img {
+    width: 100px;
+    height: auto;
+    margin-left: -20px; /* adiciona uma margem à esquerda de 20px */
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 10px; /* adiciona um espaço entre os links */
+}
+
+
+/* ========== Barra Lateral (Sidebar) ========== */
+.sidebar {
+    width: 200px;
+    background-color: var(--sidebar-background-color);
+    padding: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 87vh; /* Altura total da tela */
+    margin-right: 10px;
+    margin-left: -15px;
+}
+
+/* Exemplo de aplicação na barra lateral */
+.sidebar {
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+/* Exemplo de aplicação nos botões */
+.sidebar button,
+.server-menu button,
+.channel-menu h4,
+.search-bar button,
+.themes button,
+.help-support a {
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+/* Exemplo de aplicação no popup */
+.popup-inner {
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+/* Outros elementos podem seguir o mesmo padrão */
+
+
+
+
+.sidebar button,
+.server-menu button,
+.channel-menu h4,
+.search-bar button,
+.themes button,
+.help-support a {
+    color: var(--text-color);
+    background-color: var(--button-background-color);
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+}
+
+.sidebar button:hover,
+.server-menu button:hover,
+.channel-menu h4:hover,
+.search-bar button:hover,
+.themes button:hover,
+.help-support a:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.server,
+.friend,
+.user-details {
+    padding: 5px;
+    cursor: pointer;
+    margin-top: auto; /* Isso empurra o bloco para baixo */
+}
+
+.server:hover,
+.friend:hover,
+.user-details:hover {
+    background-color: var(--button-background-color);
+}
+
+
+
+/* pop de servidor */
+
+#createServerPopup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    z-index: 999; /* Garante que o popup fique acima dos outros elementos */
+}
+
+.popup-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color); /* Usa a variável de cor de texto */
+    background-color: var(--background-color); /* Usa a variável de cor de fundo da barra lateral */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px; /* Largura reduzida */
+    padding: 20px; /* Padding adicionado para espaçamento interno */
+}
+
+.popup-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espaçamento entre elementos */
+    align-items: center;
+}
+
+.popup-content label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.popup-content input[type="text"],
+.popup-content button[type="submit"],
+.popup-content button[type="button"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 90%; /* Ocupa todo o espaço disponível */
+}
+
+.popup-content button[type="submit"] {
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.popup-content button[type="submit"]:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+
+/* Estilizando o ícone de câmera para parecer um botão */
+.server-image-picker {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.server-image-picker img {
+    display: block;
+}
+
+/* Removendo a aparência padrão do input file */
+input[type="file"] {
+    display: none;
+}
+
+/* Estilizando os botões */
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.buttons button {
+    flex: 1;
+    margin-right: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* Estilizando o botão Criar */
+.buttons button[type="submit"] {
+    background-color: var(--button-background-color); /* Usa a variável de cor de fundo do botão */
+    color: var(--text-color); /* Usa a variável de cor de texto */
+}
+
+/* Estilizando o botão Cancelar */
+.buttons button[type="button"] {
+    background-color: var(--button-hover-background-color); /* Usa a variável de cor de fundo do botão hover */
+    color: var(--text-color); /* Usa a variável de cor de texto */
+}
+  
+/* Estilizando o campo de seleção (select) */
+select {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilizando as opções do campo de seleção (select) */
+option {
+    padding: 5px;
+}
+/* ========== User details ========== */
+.user-details {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+.user-details img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin-right: 5px;
+}
+
+.user-details h4,
+.user-details p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.user-menu {
+    position: absolute;
+    background-color: var(--menu-background-color);
+    padding: 3px;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+    right: 0px; /* Adicione o valor aqui */
+    margin-top: -500px;
+    display: none;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    width: 190px; /* Largura fixa para paisagem */
+    height: 400px; /* Altura fixa para paisagem */
+    font-size: 20px;
+}
+
+
+/* Media query para responsividade */
+@media screen and (max-width: 768px) {
+    .user-menu {
+        width: 150px; /* Largura ajustada para dispositivos menores */
+        height: 300px; /* Altura ajustada para dispositivos menores */
+    }
+}
+
+.user-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.user-menu a:hover {
+    background-color: var(--button-background-color);
+    font-size: 13px;
+}
+
+.server-menu {
+    position: relative;
+}
+
+.server-menu .menu,
+.channel-menu .channel-list,
+.search-bar .search-results,
+.themes .theme-menu,
+.help-support .help-menu {
+    display: none;
+    background-color: var(--menu-background-color);
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 2;
+}
+
+.server-menu .menu a,
+.channel-menu .channel-list a,
+.themes .theme-menu a,
+.help-support .help-menu a {
+    color: var(--text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+}
+
+.server-menu .menu a:hover,
+.channel-menu .channel-list a:hover,
+.themes .theme-menu a:hover,
+.help-support .help-menu a:hover {
+    background-color: var(--button-background-color);
+    font-size: 20px;
+}
+
+/* Status personalizado*/
+.status-popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.status-popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: var(--menu-background-color);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    color: var(--text-color);
+    border: var(--border-width) var(--border-style) var(--border-color);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+textarea {
+    width: 100%;
+    margin: 10px 0;
+    background-color: var(--chat-background-color);
+    border: var(--border-width) var(--border-style) var(--border-color);
+    color: var(--text-color);
+}
+
+.save-button {
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.save-button:hover {
+    background-color: var(--button-hover-background-color);
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+
+/* ========== Área de Servidores ========== */
+
+.server {
+    width: 50px; /* Ajuste de acordo com o tamanho desejado */
+    height: 50px;
+    position: relative;
+    cursor: pointer; /* Para mostrar que é clicável */
+    background-color: #40444b00;
+    z-index: 1;
+  }
+  
+  .server:hover {
+    background-color: #50555c00;
+}
+
+  
+.server img {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px; /* Isso mantém os cantos arredondados */
+    transition: border-radius 1.0s ease; /* Isso adiciona uma transição suave */
+}
+
+.server:hover img {
+    border-radius: 15px; /* Isso faz a imagem se tornar um quadrado */
+}
+
+  
+  .server .server-name {
+    text-align: center;
+    line-height: 50px; /* Faz com que o texto fique centralizado verticalmente */
+    font-size: 20px;
+    color: #fff;
+    border-radius: 25px;
+    background-color: #333;
+    overflow: hidden; /* Esconde o texto que passa do limite da div */
+    text-overflow: ellipsis; /* Mostra '...' se o texto for muito longo */
+    white-space: nowrap; /* Mantém o texto em uma única linha */
+    transition: border-radius 1.0s ease; /* Isso adiciona uma transição suave */
+}
+
+.server:hover .server-name {
+    border-radius: 15px; /* Isso faz a imagem se tornar um quadrado */
+}
+
+
+  
+.server-name-tooltip {
+    display: none; /* Esconde por padrão */
+    position: absolute;
+    right: 110%; /* Move a tooltip para a direita da imagem */
+    top: 30%; /* Centraliza verticalmente a tooltip */
+    background-color: #333; /* Cor de fundo */
+    color: #fff; /* Cor do texto */
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1000; /* Escolha um número adequado baseado no seu layout */
+    white-space: nowrap; /* Isso garantirá que o texto da tooltip não quebre linhas */
+    max-width: 100px; /* Ajuste para o valor que desejar. Isso limitará a largura da tooltip */
+    overflow: hidden; /* Isso irá esconder qualquer texto que ultrapasse o max-width */
+    text-overflow: ellipsis; /* Isso irá adicionar '...' no final do texto se ele ultrapassar o max-width */
+}
+
+
+  
+  .server:hover .server-name-tooltip {
+    display: block; /* Mostra quando o mouse está sobre o servidor */
+    
+  }
+  
+  
+/* ========== Área de Conteúdo e Conversa ========== */
+.content {
+    flex: 1;
+    padding: 20px;
+    
+}
+
+.chat-area {
+    background-color: var(--chat-background-color);
+    padding: 20px;
+    height: 400px;
+    overflow: auto;
+    
+}
+
+#inicio {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    
+}
+
+.conversations {
+    width: 60%;
+    background-color: var(--conversations-background-color);
+    padding: 20px;
+    position: relative;
+    margin-left: 5%;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+}
+.conversations .chat-area {
+    height: 70vh; /* Ajuste este valor conforme necessário */
+    overflow-y: auto; /* Permite a rolagem se o conteúdo exceder a altura */
+    
+  }
+  
+
+/* ========== Input Area ========== */
+
+
+.input-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid var(--conversations-background-color);
+    font-size: 16px;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 5px;
+    border-radius: 20px;
+    background: var(--button-background-color);
+    
+}
+
+.input-area #messageInput {
+    flex: 1;
+    border: none;
+    margin-left: 10px;
+    outline: none;
+    background: none;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border-radius: 9999px;
+    box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+    color: #fff;
+
+}
+
+.input-area .emoji-button,
+.input-area .sticker-picker {
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 5px;
+    color: var(--text-color);
+}
+
+.input-area button {
+    background-color: var(--button-background-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-area button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+/* Pop-up dos emojis */
+.popup {
+    position: absolute;
+    right: 10px;
+    bottom: 40px;
+    display: none;
+    background-color: var(--button-background-color);
+    border: 1px solid var(--button-hover-background-color);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.popup .popup-content span {
+    display: inline-block;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.popup .popup-content span:hover {
+    background-color: var(--button-hover-background-color);
+}
+/* O resto do seu CSS */
+
+  /* Estilização adicional para emoji e seletor de figurinhas, se necessário */
+  
+
+#messageInput {
+    width: 100%;
+}
+
+/* ========== Responsividade ========== */
+@media (max-width: 768px) {
+    #inicio {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .conversations {
+        width: 100%;
+    }
+}
+
+
+/* Alternancia mensagens diretas e amigos*/
+
+.conversations,
+.content {
+    transition: all 0.5s ease-in-out;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Defina a direção para coluna se as áreas estiverem empilhadas verticalmente */
+    overflow: hidden;
+    max-height: 0;
+}
+
+.content-area {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    /* Defina uma altura específica aqui, se necessário */
+}
+
+.content.active > .content-area {
+    display: block;
+}
+
+.content-area.active {
+    opacity: 1;
+}
+
+
+
+
+

@@ -1,3 +1,4 @@
+
 /* Estilos gerais */
 body {
   font-family: Arial, sans-serif;
@@ -23,28 +24,26 @@ body {
   margin-bottom: 20px;
 }
 
-
-
 /* Estilos do header */
 .navbar {
-  background-color: #ff0000;
+  background-color: var(--navbar-background-color);
 }
 
 .navbar-brand h1 {
-  color: #333;
+  color: var(--text-color);
   font-size: 24px;
   font-weight: bold;
   margin: 0;
 }
 
 .custom-link {
-  color: #000000;
+  color: var(--custom-link-color);
   font-weight: bold;
   text-decoration: none;
 }
 
 .custom-link:hover {
-  color: #4220bd;
+  color: var(--custom-link-hover-color);
 }
 
 
@@ -53,7 +52,7 @@ body {
 }
 
 .nav-link {
-  color: #333;
+  color: var(--nav-link-color);
 }
 
 
@@ -167,70 +166,61 @@ input[type="password"] {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-/* Card section (inicio)*/
-
-
+/* Card section (inicio) */
 .card2 {
   background-color: #f4f4f4;
   color: #ffffff;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  padding: 5vw; /* Utiliza unidade relativa */
   border-radius: 0px;
   display: flex;
-  flex-direction: column;  /* Altera a direção para coluna */
-  align-items: center;  /* Alinha os itens no centro */
+  flex-direction: column;
+  align-items: center;
 }
 
 .card-image {
-  margin-top: -300px;
-  width: 100%;  
-  max-width: 500px;  
-  object-fit: cover;  
-  margin-bottom: -120px;  /* Diminui o espaço. Ajuste este valor conforme necessário */
+  width: 100%;
+  max-width: 500px;
+  height: auto; /* Adapta a altura automaticamente */
+  object-fit: cover;
+  margin-bottom: -10vh; /* Utiliza unidade relativa */
 }
 
-
-
 .card-title2 {
-  margin-top: 10px; /* Adicione isso para diminuir o espaço. Ajuste o valor conforme necessário */
-  font-size: 50px;
+  font-size: 2.5vw; /* Utiliza unidade relativa */
   font-weight: bold;
   color: #000000;
   text-align: center;
-  margin: auto;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Isso fará com que o contêiner ocupe a altura total da janela de visualização */
-  flex-direction: column; /* Isso fará com que os itens filhos sejam empilhados verticalmente */
-}
-
-.card-title2 {
-  font-size: 50px;
-  font-weight: bold;
-  text-align: center;
-  margin: auto;
-  font-weight: bold;
-  margin: 10px;
+  margin: 10px; /* Utiliza unidade relativa */
+  margin-bottom: 70px;
   color: #6200ff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
 }
 
 .card-subtitle2 {
-  font-size: 18px;
+  font-size: 1vw; /* Utiliza unidade relativa */
   color: #000000;
   text-align: center;
-  margin: auto;
-  margin-top: 10px;
+  margin: 10px; /* Utiliza unidade relativa */
   font-family: 'Arial Black', sans-serif;
+  margin-bottom: 200px;
 }
 
+/* Adicione uma media query para dispositivos menores */
+@media screen and (max-width: 768px) {
+  .card2 {
+    padding: 10vw; /* Tamanho de padding maior em dispositivos menores */
+  }
 
+  .card-title2 {
+    font-size: 5vw; /* Tamanho de fonte maior em dispositivos menores */
+  }
+
+  .card-subtitle2 {
+    font-size: 2vw; /* Tamanho de fonte maior em dispositivos menores */
+  }
+}
 
 
 
@@ -715,4 +705,54 @@ footer button:hover {
 
 .redes-sociais ul li a .fab.fa-youtube {
   color: #888888;
+}
+
+
+/* botão para o chat*/
+
+.chatBtn {
+  width: 70px; /* Aumenta o tamanho do botão */
+  height: 70px; /* Aumenta o tamanho do botão */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background-color: #6c63ff;
+  background-image: linear-gradient(147deg, #6c63ff, #9400D3, #BA55D3);
+  cursor: pointer;
+  padding-top: 3px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+  position: fixed; /* Posição fixa */
+  bottom: 20px; /* Afastado do canto inferior */
+  right: 20px; /* Afastado do canto direito */
+  background-size: 300%;
+  background-position: left;
+  transition-duration: 1s;
+}
+
+.tooltip {
+  position: absolute;
+  top: -40px;
+  opacity: 0;
+  background-color: #2600ff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.5s;
+  pointer-events: none;
+  letter-spacing: 0.5px;
+}
+
+.chatBtn:hover .tooltip {
+  opacity: 1;
+  transition-duration: 0.5s;
+}
+
+.chatBtn:hover {
+  background-position: right;
+  transition-duration: 1s;
 }

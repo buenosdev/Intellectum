@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="cta-section" id="ctaSection">
+            <h2>Assine agora!</h2>
+            <p>Obtenha acesso a recursos exclusivos com nossa assinatura premium.</p>
+            <p>Assine agora e aproveite todos os benefícios!</p>
+
+            <!-- DEVE FICAR AQUI -->
+            <div class="card_r">
+                <input id="register_toggle" type="checkbox">
+                <div class="slider">
+                  <form class="form">
+                    <span class="title">Login</span>
+                    <div class="form_control">
+                      <input required="" class="input" type="text">
+                      <label class="label">Nome de Usuário</label>
+                    </div>
+                    <div class="form_control">
+                      <input required="" class="input" type="password">
+                      <label class="label">Senha</label>
+                    </div>
+                    <button>Login</button>
+              
+                    <span class="bottom_text">Não tem uma conta? <label class="swtich" for="register_toggle">Cadastre-se</label> </span>
+                  </form>
+                  <form class="form">
+                    <span class="title">Cadastro</span>
+                    <div class="form_control">
+                      <input required="" class="input" type="text">
+                      <label class="label">Nome de Usuário</label>
+                    </div>
+                    <div class="form_control">
+                      <input required="" class="input" type="email">
+                      <label class="label">Email</label>
+                    </div>
+                    <div class="form_control">
+                      <input required="" class="input" type="password">
+                      <label class="label">Senha</label>
+                    </div>
+                    <button>Cadastre-se</button>
+              
+                    <span class="bottom_text">Já tem uma conta? <label class="swtich" for="register_toggle">Faça login</label> </span>
+                  </form>
+              
+                  
+                  </div>
+              </div>
+            <button class="submit-button" onclick="redirectToAssinatura()">Voltar</button>
+
+            
+        </div>
+        
+        <div class="payment-form" id="paymentForm">
+            <h2>Pagamento</h2>
+            <form action="/processar_pagamento" method="post">
+                <div class="form-group">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="plan">Plano:</label>
+                    <select id="plan" name="plan" required>
+                        <option value="">Selecione um plano</option>
+                        <option value="plano1">Plano 1</option>
+                        <option value="plano2">Plano 2</option>
+                        <option value="plano3">Plano 3</option>
+                    </select>
+
+            <h2>Forma de Pagamento</h2>
+            <form action="/process_payment" method="post">
+                <div class="form-group">
+                    <label for="paymentMethod">Escolha a forma de pagamento:</label>
+                    <select id="paymentMethod" name="paymentMethod">
+                        <option value="credit_card">Cartão de Crédito</option>
+                        <option value="pix">PIX</option>
+                        <option value="debit_card">Cartão de Débito</option>
+                    </select>
+                </div>
+            </div>
+                <!-- Campos para pagamento via Cartão de Crédito -->
+                <div id="creditCardFields">
+                    <div class="form-group">
+                        <label for="card_number">Número do Cartão:</label>
+                        <input type="text" id="card_number" name="card_number">
+                    </div>
+                    <div class="form-group">
+                        <label for="card_expiry">Data de Validade:</label>
+                        <input type="text" id="card_expiry" name="card_expiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="card_cvv">CVV:</label>
+                        <input type="text" id="card_cvv" name="card_cvv">
+                    </div>
+                    <button type="submit" class="submit-button">Pagar com Cartão de Crédito</button>
+                </div>
+
+                <!-- Campos para pagamento via PIX -->
+                <div id="pixFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="pix_key">Chave PIX:</label>
+                        <input type="text" id="pix_key" name="pix_key">
+                    </div>
+                    <button type="submit" class="submit-button">Pagar com PIX</button>
+                </div>
+
+                <!-- Campos para pagamento via Cartão de Débito -->
+                <div id="debitCardFields" style="display: none;">
+                    <div class="form-group">
+                        <label for="debit_card_number">Número do Cartão:</label>
+                        <input type="text" id="debit_card_number" name="debit_card_number">
+                    </div>
+                    <div class="form-group">
+                        <label for="debit_card_expiry">Data de Validade:</label>
+                        <input type="text" id="debit_card_expiry" name="debit_card_expiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="debit_card_cvv">CVV:</label>
+                        <input type="text" id="debit_card_cvv" name="debit_card_cvv">
+                    </div>
+                    <button type="submit" class="submit-button">Pagar com Cartão de Débito</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Botão para alterar o tema -->
+    <button class="theme-toggle" onclick="toggleTheme()">Alterar Tema</button>
+
+    <script src="script.js"></script>
+    <script>
+        function redirectToAssinatura() {
+            window.location.href = "../recursos/recursos.html";
+        }
+    </script>
+</body>
+
+</html>

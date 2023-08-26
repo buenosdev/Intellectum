@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css">
+    <title>Chat</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-title-container">
+            <a href="../inicio/inicio.html"><img src="./img/logo.png" alt="Logo" /></a>
+            <div class="title-container">
+                <h1 class="title">Intellectum</h1>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="../inicio/inicio.html">Início</a>
+            <a href="../cursos/cursos.html">Cursos</a>
+            <a href="../sobre/sobre.html">Sobre</a>
+            <a href="../recursos/recursos.html">Recursos</a>
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="themeSwitcher">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+
+<section id="inicio">
+    <div class="sidebar">
+        
+        <div class="server-menu">
+            <button onclick="toggleMenu(event)">Abrir Menu</button>
+            <div class="menu" style="display: none;">
+                <a href="#">Configurações</a>
+                <a href="#">Membros</a>
+                <!-- Adicione mais opções aqui -->
+            </div>
+        </div>
+        <button onclick="showServerPopup()">Criar Servidor</button>
+        <div id="serverList" class="servers">
+            <!-- A lista de servidores será preenchida aqui -->
+        </div>
+        <button onclick="showMessageArea()">Mensagens Diretas</button>
+        <button onclick="showFriendsArea()">Lista de Amigos</button>     
+
+<!-- Menu de Configurações do Usuário -->
+<div class="user-details" onclick="toggleUserMenu()">
+    <img src="avatar.png" alt="Avatar do usuário" />
+    <div>
+        <h4>Nome de Usuário</h4>
+        <p>#0001</p> <!-- O identificador único do usuário -->
+    </div>
+    <div class="user-menu" id="userMenu" style="display: none;">
+        <!-- Conteúdo do menu de usuário aqui -->
+        <img src="avatar.png" alt="Avatar do usuário" />
+        <h4>Nome de Usuário</h4>
+        <p>#0001</p>
+        <p>Status: Online</p>
+        <p>Sobre mim: <span>Descrição sobre o usuário</span></p> <!-- Sobre mim -->
+        <p>Membro do Intellectum desde: <span>01/01/2021</span></p> <!-- Data de adesão -->
+        <a href="javascript:void(0);" onclick="toggleStatusPopup()">Definir status personalizado</a>
+        <a href="./config/config.html">Configurações do Usuário</a>
+        <a href="#sair">Sair</a>
+    </div>
+</div>
+ <!-- Fim da barra lateral -->
+</div>
+
+<!-- Status personalizado -->
+
+<div class="status-popup" id="statusPopup">
+    <div class="status-popup-content" id="statusPopupContent">
+        <span class="close" onclick="closeStatusPopup()">&times;</span>
+        <h4>Definir status personalizado</h4>
+        <textarea id="customStatus" placeholder="Digite seu status personalizado..."></textarea>
+        <button class="save-button" onclick="saveStatus()">Salvar</button>
+    </div>
+</div>
+
+ <!-- Fim -->
+
+<div class="conversations">
+    <div id="chatArea" class="chat-area">
+        <!-- Área de chat -->
+    </div>
+    <div class="input-area">              
+        <div class="input-container">
+            <button class="emoji-button" onclick="togglePopup('emojiPicker')">😀</button>
+            <input type="text" id="messageInput" placeholder="Digite sua mensagem..." />
+            <button class="send-button" onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+    </div>
+<div class="content">
+    <div id="messagesArea" class="content-area">
+        <h2>Mensagens Diretas</h2>
+        <!-- Área de mensagens diretas -->
+    </div>
+
+    <div id="friendsArea" class="content-area">
+        <h2>Lista de Amigos</h2>
+        <div class="friend">Amigo 1</div>
+        <div class="friend">Amigo 2</div>
+        <div class="friend">Amigo 3</div>
+    </div>
+</div>
+
+<div id="serverContainer" class="servers">
+    <h3>Servidores</h3>
+</div>
+
+
+    </section>
+
+
+    <div id="createServerPopup" onclick="closeServerPopupOnOutsideClick(event)">
+        <div class="popup-inner">
+            <div class="close-button" onclick="closeServerPopup()">X</div>
+            <div class="popup-content">
+                <h2>Criar Servidor</h2>
+                <label for="serverImageInput">
+                    <div class="server-image-picker">
+                        <img src="camera-icon.png" alt="Câmera" width="40" height="40">
+                    </div>
+                </label>
+                <input type="file" id="serverImageInput" style="display: none;">
+                <form onsubmit="submitServer(); return false;">
+                    <label for="serverNameInput">Nome do Servidor:</label>
+                    <input type="text" id="serverNameInput">
+                    <label for="serverTypeInput">Tipo do Servidor:</label>
+                    <select id="serverTypeInput">
+                        <option value="friends">Para eu e outros amigos</option>
+                        <option value="community">Para comunidade</option>
+                    </select>
+                    <div class="buttons">
+                        <button type="submit">Criar</button>
+                        <button type="button" onclick="closeServerPopup()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+      
+      <script src="./IPr.js"></script>      
+</body>
+</html>
