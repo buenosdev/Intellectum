@@ -1,5 +1,6 @@
 # Intellectum
-[PT-BR]
+## [PT-BR]
+
 Nosso site oferece uma plataforma para a venda de cursos, apresentando um layout padrão, mas com funcionalidades adicionais que aprimoram a experiência do usuário. Estas funcionalidades podem ser exploradas nas abas 'Recursos' e 'Chat'. Para uma compreensão mais abrangente da proposta do site, recomendo a leitura da seção 'Sobre', onde disponibilizo uma explicação mais detalhada, visando facilitar o entendimento dos usuários.
 
 ### Para uma facilidade de acesso, o texto estará abaixo:
@@ -24,7 +25,7 @@ Além de nossos cursos pagos, o Intelectum disponibiliza dicas de estudo gratuit
 ### O que torna o Intelectum diferente de outras plataformas de aprendizado online?
 O Intelectum se distingue pela combinação de cursos pagos de alta qualidade e uma variedade de recursos gratuitos de aprendizado. Além disso, nossa plataforma promove a interação direta entre estudantes e professores, oferecendo um suporte personalizado.
 
-[ENG]
+## [ENG]
 
 Our website offers a platform for selling courses, featuring a standard layout, but with additional features that enhance the user experience. These features can be explored in the 'Resources' and 'Chat' tabs. For a more comprehensive understanding of the site's proposal, I recommend reading the 'About' section, where I provide a more detailed explanation, aiming to facilitate users' understanding.
 
