@@ -40,7 +40,7 @@ One of Intelectum's main features is the quality of our educational content. Our
 
 Our website also offers interactive features to promote an engaging learning experience. Students have the opportunity to interact directly with teachers and other students through discussion forums and chat rooms. This social and collaborative interaction encourages the exchange of ideas, sharing of knowledge and resolving doubts, further enriching the learning experience.
 
-#FAQ
+# FAQ
 
 ### How does Intelectum contribute to a more inclusive learning experience?
 Intelectum aims to make education accessible to everyone, regardless of their socioeconomic conditions. We offer free, high-quality content, as well as subscriptions and paid content, to ensure all students have the tools they need to achieve their academic goals.
